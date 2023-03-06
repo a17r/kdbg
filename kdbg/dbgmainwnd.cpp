@@ -1274,5 +1274,5 @@ void DebuggerMainWnd::slotExecArgs()
 
 void DebuggerMainWnd::slotConfigureKeys()
 {
-    KShortcutsDialog::configure(actionCollection());
+    KShortcutsDialog::showDialog(actionCollection(), KShortcutsEditor::LetterShortcutsDisallowed, this);
 }
