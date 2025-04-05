@@ -16,6 +16,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     I18n
     Config
+    CoreAddons
     IconThemes
     XmlGui
     WindowSystem

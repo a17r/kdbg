@@ -92,6 +92,7 @@ target_link_libraries(kdbg
     Qt6::Core5Compat
     KF6::I18n
     KF6::ConfigCore
+    KF6::CoreAddons
     KF6::IconThemes
     KF6::WindowSystem
     KF6::XmlGui
