@@ -21,6 +21,7 @@
 #include <ktoolbar.h>
 #include <kxmlguifactory.h>
 #include <KPageDialog>
+#include <KX11Extras>
 #include <QListWidget>
 #include <QFile>
 #include <QFileDialog>
@@ -1073,8 +1074,9 @@ void DebuggerMainWnd::slotProgramStopped()
     // when the program stopped, move the window to the foreground
     if (m_popForeground) {
 	// unfortunately, this requires quite some force to work :-(
-	KWindowSystem::raiseWindow(winId());
-	KWindowSystem::forceActiveWindow(winId());
+		if (KWindowSystem::isPlatformX11()) {
+			KX11Extras::forceActiveWindow(winId());
+		}
     }
     m_backTimer.stop();
 }
